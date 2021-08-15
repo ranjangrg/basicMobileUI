@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import { connect } from 'react-redux';
 
-import defaultAppIcon from '../defaultAppIcon.svg';
+import defaultAppIcon from '../appIcons/defaultAppIcon.svg';
 // credit: https://icons8.com/icons/set/settings
 
 import { openApp, changeView } from '../actions';

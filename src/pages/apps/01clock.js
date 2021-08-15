@@ -41,6 +41,10 @@ class ClockApp extends Component {
 			<p>
 				Fruit: { fruit_list[this.state.idx] }
 			</p>
+			<p>
+				Note: State is preserved even on 'unmount'
+			</p>
+
 		</div>);
 	};
 }
