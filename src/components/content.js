@@ -30,7 +30,7 @@ class Content extends Component {
 			<div id="app-content" className="py-2">
 				{ 
 					this.props.currentView === views.APP_LIST ? 
-					<AppList /> : <AppView />
+					<AppList /> : <AppView app-id={this.props.currentAppId} />
 				}
 			</div>
 		);
@@ -38,4 +38,3 @@ class Content extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps())(Content);
-// export default connect(mapStateToProps, { openApp } )(Content);
