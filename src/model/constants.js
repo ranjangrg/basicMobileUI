@@ -8,6 +8,7 @@ import appWeatherIcon from '../appIcons/appWeatherIcon.svg';
 import appNotesIcon from '../appIcons/appNotesIcon.svg';
 import appCalculatorIcon from '../appIcons/appCalculatorIcon.svg';
 import appMailIcon from '../appIcons/appMailIcon.svg';
+import appChatIcon from '../appIcons/appChatIcon.svg';
 
 import ClockApp from '../pages/apps/01clock';
 import CalendarApp from '../pages/apps/02calendar';
@@ -18,6 +19,7 @@ import NotesApp from '../pages/apps/06notes';
 import CalculatorApp from '../pages/apps/07calculator';
 import MailApp from '../pages/apps/08mail';
 import SettingsApp from '../pages/apps/09settings';
+import ChatApp from '../pages/apps/10chat';
 import DefaultApp from '../pages/apps/00default';
 
 const views = {
@@ -40,6 +42,7 @@ const appsData = [
 	{name: "Calculator", id: 7, icon: appCalculatorIcon, source: <CalculatorApp />}, 
 	{name: "Mail", id: 8, icon: appMailIcon, source: <MailApp />},
 	{name: "Settings", id: 9, icon: appSettingsIcon, source: <SettingsApp />},
+	{name: "Chat", id: 10, icon: appChatIcon, source: <ChatApp />},
 	{name: "Unknown", id: -1, icon: defaultAppIcon ,source: <DefaultApp />},
 ];
 
