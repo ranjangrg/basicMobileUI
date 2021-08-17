@@ -54,7 +54,6 @@ class AppList extends Component {
 			app_detail.icon : defaultAppIcon;
 		return (<div 
 			className="col" 
-			style={ { maxWidth: this.state.card_width } }
 			onClick={ () => this.open_app_wrapper(app_detail) }
 			key={"app-card-col-"+app_detail.id}> 
 			{this.create_card(app_detail.name, app_icon)} 

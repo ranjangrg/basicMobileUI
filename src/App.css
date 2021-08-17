@@ -23,12 +23,20 @@ body {
 } */
 
 #app-status-bar {
-  background-color: #282c34;
-  min-height: 5vh;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: #282c34;
   color: white;
+  min-height: 5vh;
+  max-height: 5vh;
+  font-size: calc(3vh);
+}
+#app-status-bar img { 
+  /* icon image  */
+  max-height: 4vh;  
+  /* note: 1vh lower than status bar 
+  * Better to use SASS for these stuffs
+  */
 }
 #app-status-bar .row {
   height: 5vh; 
@@ -38,6 +46,8 @@ body {
 #app-content {
   background-color: #fff;
   min-height: 85vh;
+  max-height: 85vh;
+  overflow-y: scroll;
   display: flex;
   flex-direction: column;
   /* align-items: center; */
@@ -75,4 +85,21 @@ body {
 }
 #app-applist .card:hover {
   background-color: rgba(var(--app-link-color), 0.5);
+}
+
+
+/* mainly targets iPhone 6S; not tested for all mobiles
+so probably won't work properly on all mobiles */
+@media only screen and (max-device-width: 667px) {
+  #app-status-bar {
+    min-height: 6vh;
+    max-height: 6vh;
+  }
+  #app-content {
+    min-height: 70vh;
+    max-height: 70vh;
+  }
+  #app-footer {
+    min-height: 12vh;
+  }
 }
