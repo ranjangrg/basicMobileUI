@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 
 import { appsData, defaultAppData } from '../model/constants';
 
+import InfoIcon from '@material-ui/icons/Info';
+
 // get matching app by comparing app-id
 const get_app_details_from_id = (app_id = -1) => {
 	let app_detail = defaultAppData;
@@ -29,8 +31,19 @@ class AppView extends Component {
 			case app_id:
 				const app_detail = get_app_details_from_id(app_id);
 				return (<div>
+					<span 
+						type="button" 
+						className="btn btn-dark"
+						data-target-div="app-view-app-details"
+						onClick={(e) => {
+							let elem = document.getElementById(e.target.dataset.targetDiv);
+							console.log(elem)
+							elem.classList.toggle("d-none");
+						}}
+						> <InfoIcon /> Show app details 
+					</span>
 					<div>
-						<ul className="list-group pb-3">
+						<ul id="app-view-app-details" className="list-group pb-3 d-none">
 							<li className="list-group-item">
 								<span className="float-start">App ID:</span> 
 								<span className="float-end">{ app_detail.id } </span>
@@ -54,9 +67,9 @@ class AppView extends Component {
 		}
 	};
 	render() {
-		get_app_details_from_id();
+		// get_app_details_from_id();
 		return (<div id="app-view" className="container">
-			<h1>{ this.props.currentApp.name }</h1>
+			{/* <h1>{ this.props.currentApp.name }</h1> */}
 			{ this.open_app(this.props.currentAppId) }
 		</div>);
 	}

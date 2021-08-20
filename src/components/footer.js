@@ -6,9 +6,10 @@ import { views } from '../model/constants';
 
 // import HomeIcon from '@material-ui/icons/Home';
 // import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
+// import AppsIcon from '@material-ui/icons/Apps';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import ReorderIcon from '@material-ui/icons/Reorder';
-import AppsIcon from '@material-ui/icons/Apps';
+import homeIcon from '../appIcons/homeIcon.svg';
 
 // const homeIconStyle = {fontSize: "3rem", cursor: "pointer"};
 // const arrowForwardIconStyle = {fontSize: "2rem", cursor: "pointer"};
@@ -40,10 +41,11 @@ class Footer extends Component {
 				<div className="row align-items-center justify-content-between">
 					<div className="col"> <ArrowBackIcon style={ arrowBackIconStyle } /> </div>
 					<div className="col">
-						<AppsIcon 
+						<img 
+							src={ homeIcon }
 							style={ appsIconStyle } 
-							onClick={ () => this.open_applist_wrapper() }>
-						</AppsIcon>
+							alt="home-button"
+							onClick={ () => this.open_applist_wrapper() } />
 					</div>
 					<div className="col"> <ReorderIcon style={ ReorderIconStyle } /> </div>
 				</div>

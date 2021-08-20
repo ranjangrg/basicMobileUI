@@ -46,4 +46,10 @@ const appsData = [
 	{name: "Unknown", id: -1, icon: defaultAppIcon ,source: <DefaultApp />},
 ];
 
-export { views, defaultAppData, appsData };
+const themes = {
+	"LIGHT": 0,
+	"DARK": 1,
+	"MIXED": 2
+};
+
+export { views, defaultAppData, appsData, themes };

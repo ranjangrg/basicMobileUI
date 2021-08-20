@@ -1,4 +1,4 @@
-import { views } from '../model/constants';
+import { views, themes } from '../model/constants';
 
 export const openApp = (app_id = 0) => {
 	return {
@@ -20,3 +20,12 @@ export const updateTime = (curr_time = Date().substring(16, 24)) => {
 		payload: curr_time
 	};
 };
+
+export const changeTheme = (new_theme = themes.LIGHT) => {
+	return {
+		type: "CHANGE_THEME",
+		payload: new_theme
+	};
+};
+
+
