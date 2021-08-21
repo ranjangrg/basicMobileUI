@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import { openApp, changeView } from '../actions';
 import { views } from '../model/constants';
 
+import { getThemeClass } from '../modules/globalFunctions';
+
 // import HomeIcon from '@material-ui/icons/Home';
 // import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 // import AppsIcon from '@material-ui/icons/Apps';
@@ -20,7 +22,8 @@ const ReorderIconStyle = {fontSize: "2rem", cursor: "pointer"};
 const mapStateToProps = (state) => {
 	return {
 		currentAppId: state.currentAppId,
-		currentView: state.currentView
+		currentView: state.currentView,
+		currentTheme: state.currentTheme
 	};
 };
 
@@ -37,7 +40,7 @@ class Footer extends Component {
 	};
 	render() {
 		return (
-			<footer id="app-footer" className="container gy-0">
+			<footer id="app-footer" className={ "container gy-0 " + getThemeClass(this.props.currentTheme) }>
 				<div className="row align-items-center justify-content-between">
 					<div className="col"> <ArrowBackIcon style={ arrowBackIconStyle } /> </div>
 					<div className="col">

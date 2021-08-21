@@ -1,4 +1,4 @@
-import { views, themes } from '../model/constants';
+import { views, themes, langs } from '../model/constants';
 
 export const openApp = (app_id = 0) => {
 	return {
@@ -28,4 +28,9 @@ export const changeTheme = (new_theme = themes.LIGHT) => {
 	};
 };
 
-
+export const changeLang = (new_lang = langs.EN) => {
+	return {
+		type: "CHANGE_LANG",
+		payload: new_lang
+	};
+};

@@ -37,7 +37,6 @@ class AppView extends Component {
 						data-target-div="app-view-app-details"
 						onClick={(e) => {
 							let elem = document.getElementById(e.target.dataset.targetDiv);
-							console.log(elem)
 							elem.classList.toggle("d-none");
 						}}
 						> <InfoIcon /> Show app details 
@@ -58,7 +57,7 @@ class AppView extends Component {
 							</li>
 						</ul>
 					</div>
-					<div className="border">
+					<div>
 						{ app_detail.source }
 					</div>
 				</div>);

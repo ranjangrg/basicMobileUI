@@ -1,10 +1,52 @@
 :root {
   --app-body-bg-color: #282C34;
+  --app-body-bg-light-color: #20A4F3;
+  --app-body-fg-light-color: #040101;
+  --app-body-bg-dark-color: 28, 29, 31;
+  --app-body-text-dark-color: #DDD;
+  --app-content-bg-dark-color: #1E2126;
+  --app-content-fg-dark-color: white;
   --app-link-color: 97, 218, 251;
 }
 
 body {
   background-color: var(--app-body-bg-color);
+}
+
+.app-theme-light {
+  background-color: var(--app-body-bg-light-color);
+  color: var(--app-body-fg-light-color);
+  -o-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+.app-theme-dark {
+  background-color: var(--app-body-bg-dark-color);
+  color: var(--app-body-text-dark-color);
+  -o-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+
+.app-theme-dark .list-group-item {
+  /* overriding bootstrap styles for lists */
+  background-color: rgba(230, 230, 230, 0.1);
+  color: var(--app-body-text-dark-color);
+  -o-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+.app-theme-dark select {
+  /* overriding bootstrap styles for lists */
+  background-color: rgba(230, 230, 230, 0.1);
+  color: var(--app-body-text-dark-color);
+  -o-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
 }
 
 .App {
@@ -25,8 +67,6 @@ body {
 #app-status-bar {
   align-items: center;
   justify-content: center;
-  background-color: #282c34;
-  color: white;
   min-height: 5vh;
   max-height: 5vh;
   font-size: calc(3vh);
@@ -54,16 +94,18 @@ body {
   /* justify-content: center; */
   font-size: calc(10px + 2vmin);
 }
+#app-content.app-theme-dark {
+  background-color: var(--app-content-bg-dark-color);
+  color: var(--app-content-fg-dark-color);
+}
 
 #app-footer {
-  background-color: #282c34;
   min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .App-link {

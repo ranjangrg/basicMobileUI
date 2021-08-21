@@ -6,11 +6,13 @@ import { connect } from 'react-redux';
 
 import { openApp, changeView } from '../actions';
 import { views } from '../model/constants';
+import { getThemeClass } from '../modules/globalFunctions';
 
 const mapStateToProps = (state) => {
 	return {
 		currentAppId: state.currentAppId,
-		currentView: state.currentView
+		currentView: state.currentView,
+		currentTheme: state.currentTheme
 	};
 };
 
@@ -27,7 +29,7 @@ class Content extends Component {
 	};
 	render() {
 		return (
-			<div id="app-content" className="py-2">
+			<div id="app-content" className={ "py-2 " + getThemeClass(this.props.currentTheme) }>
 				{ 
 					this.props.currentView === views.APP_LIST ? 
 					<AppList /> : <AppView app-id={this.props.currentAppId} />

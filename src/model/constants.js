@@ -52,4 +52,12 @@ const themes = {
 	"MIXED": 2
 };
 
-export { views, defaultAppData, appsData, themes };
+const langs = {
+	"EN": 0,
+	"FR": 1,
+	"NL": 2,
+	"DE": 3,
+	"IT": 4
+};
+
+export { views, defaultAppData, appsData, themes, langs };
