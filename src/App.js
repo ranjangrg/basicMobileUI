@@ -1,6 +1,6 @@
 
-import 'bootstrap/dist/css/bootstrap.min.css'; // bootstrap
-import './App.css';
+// import 'bootstrap/dist/css/bootstrap.min.css'; // bootstrap
+import './App.scss';
 
 import StatusBar from './components/statusBar';
 import Content from './components/content';

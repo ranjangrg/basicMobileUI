@@ -1,3 +1,5 @@
+@import './styles/_colors.scss';
+
 :root {
   --app-body-bg-color: #282C34;
   --app-body-bg-light-color: #20A4F3;
@@ -39,10 +41,10 @@ body {
   -o-transition-duration: 0.5s;
   transition-duration: 0.5s;
 }
-.app-theme-dark select {
+.app-theme-dark select,.card {
   /* overriding bootstrap styles for lists */
   background-color: rgba(230, 230, 230, 0.1);
-  color: var(--app-body-text-dark-color);
+  color: var(--app-content-text-dark-color);
   -o-transition-timing-function: ease-in;
   transition-timing-function: ease-in;
   -o-transition-duration: 0.5s;
@@ -57,12 +59,6 @@ body {
   height: 40vmin;
   pointer-events: none;
 }
-
-/* @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-} */
 
 #app-status-bar {
   align-items: center;
@@ -111,15 +107,6 @@ body {
 .App-link {
   color: var(--app-link-color);
 }
-
-/* @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
 
 /* for applist */
 #app-applist .card {

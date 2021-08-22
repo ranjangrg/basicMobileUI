@@ -11,6 +11,7 @@ class DefaultApp extends Component {
 					<li> App doesn't exist </li>
 					<li> App isn't configured properly </li>
 				</ul>
+				<div className="test-class"> Hello this is a test </div>
 			</div>
 		</div>);
 	};
